@@ -33,4 +33,8 @@ public class Customer {
     private String city;
 
     private String nip;
+
+    public int getId() {
+        return id;
+    }
 }

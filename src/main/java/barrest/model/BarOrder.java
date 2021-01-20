@@ -23,6 +23,8 @@ public class BarOrder {
     @Enumerated(EnumType.STRING)
     private Payment paymentDoc;
 
+    @Column
+    private int quantity;
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     Customer customer;
@@ -31,4 +33,11 @@ public class BarOrder {
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     Product product;
 
+    public void setCustomer( Customer customer ) {
+        this.customer = customer;
+    }
+
+    public void setProduct( Product product ) {
+        this.product = product;
+    }
 }
