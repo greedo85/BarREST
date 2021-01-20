@@ -20,8 +20,7 @@ CREATE TABLE IF NOT EXISTS customer
 	flat_number int,
 	post_code varchar(6),
 	city varchar(155),
-	nip varchar(10),
-	payment ENUM ('RECEIPT', 'INVOICE') DEFAULT 'RECEIPT',
+	nip varchar(10)
 
 
 );
@@ -33,6 +32,7 @@ CREATE TABLE IF NOT EXISTS barorder
 	product_id INT NOT NULL,
 	status ENUM ('OPENED', 'CLOSED') DEFAULT 'OPENED',
 	quantity int NOT NULL,
+	payment ENUM ('RECEIPT', 'INVOICE') DEFAULT 'RECEIPT',
 	CONSTRAINT FK_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id),
 	CONSTRAINT FK_product_id FOREIGN KEY (product_id) REFERENCES product(id)
 
