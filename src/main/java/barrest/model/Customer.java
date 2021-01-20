@@ -2,6 +2,8 @@ package barrest.model;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table
+@NoArgsConstructor
 public class Customer {
 
     @Id
@@ -34,7 +37,13 @@ public class Customer {
 
     private String nip;
 
-    public int getId() {
-        return id;
+    public Customer( String companyName, String street, String houseNumber, int flatNumber, String postCode, String city, String nip ) {
+        this.companyName = companyName;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.flatNumber = flatNumber;
+        this.postCode = postCode;
+        this.city = city;
+        this.nip = nip;
     }
 }

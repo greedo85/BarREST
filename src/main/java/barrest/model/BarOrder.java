@@ -33,11 +33,5 @@ public class BarOrder {
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     Product product;
 
-    public void setCustomer( Customer customer ) {
-        this.customer = customer;
-    }
 
-    public void setProduct( Product product ) {
-        this.product = product;
-    }
 }
