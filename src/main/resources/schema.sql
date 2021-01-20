@@ -35,5 +35,4 @@ CREATE TABLE IF NOT EXISTS barorder
 	payment ENUM ('RECEIPT', 'INVOICE') DEFAULT 'RECEIPT',
 	CONSTRAINT FK_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id),
 	CONSTRAINT FK_product_id FOREIGN KEY (product_id) REFERENCES product(id)
-
 )
