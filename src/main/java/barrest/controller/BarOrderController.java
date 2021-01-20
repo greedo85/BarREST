@@ -25,4 +25,6 @@ public class BarOrderController {
     public List<BarOrder> getBarOrders() {
         return barOrderService.getBarOrders();
     }
+
+    
 }

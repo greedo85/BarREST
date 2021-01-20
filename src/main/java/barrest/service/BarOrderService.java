@@ -25,4 +25,5 @@ public class BarOrderService {
     public BarOrder addBarOrder( BarOrder barOrder ) {
        return barOrderRepository.save(barOrder);
     }
+
 }
