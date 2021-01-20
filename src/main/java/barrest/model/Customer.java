@@ -28,7 +28,7 @@ public class Customer {
     private String houseNumber;
 
     @Column(name = "flat_number")
-    private int flatNumber;
+    private Integer flatNumber;
 
     @Column(name = "post_code")
     private String postCode;
